@@ -14,6 +14,7 @@ export class GithubRepoCard {
   @State() openIssues: number;
   @State() error: string;
   @State() loading: boolean = true;
+  private intervalId: number; // Store the interval ID to clear it later
 
 
   async fetchRepoData() {
@@ -52,8 +53,18 @@ export class GithubRepoCard {
     }
   }
 
-  componentWillLoad() {
-    this.fetchRepoData();
+  componentDidLoad() {
+    // Set up an interval to refresh data every 10 minutes (600,000 milliseconds)
+    this.intervalId = window.setInterval(() => {
+      this.fetchRepoData(); // Trigger data refresh
+    }, 600000); // 10 minutes
+  }
+
+  disconnectedCallback() {
+    // Clear the interval when the component is removed to prevent memory leaks
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
   }
   render() {
     return (

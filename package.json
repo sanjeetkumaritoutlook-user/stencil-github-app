@@ -1,6 +1,6 @@
 {
   "name": "stencil-github-app",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "GitHub Repo Card Component",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/stenciljs/component-starter.git"
+    "url": "https://github.com/sanjeetkumaritoutlook-user/stencil-github-app.git"
   },
   "files": [
     "dist/",
