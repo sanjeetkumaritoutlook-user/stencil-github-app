@@ -10,7 +10,7 @@ export const config: Config = {
     {
       type: 'dist-custom-elements',
       customElementsExportBehavior: 'auto-define-custom-elements',
-      externalRuntime: false,
+      externalRuntime: true, // ✅ Enables using in another Stencil app,
     },
     {
       type: 'docs-readme',

@@ -4,7 +4,20 @@
 
 install the package and use:
 
-in this format : <github-repo-card owner="stenciljs" repo="core"></github-repo-card>
+in this format : 
+
+```html
+<github-repo-card owner="stenciljs" repo="core"></github-repo-card>
+```
+
+in another stencilJS application:
+
+in src/global/app.ts:
+
+import { defineCustomElements } from 'stencil-github-app/loader';
+
+defineCustomElements();
+
 
 where owner and repo are Props taking value from github
 
@@ -23,37 +36,6 @@ to create new component in stenciljs:  npm run generate
 npm run build
 
 npm publish --access public
-
-## Getting Started
-
-To start building a new web component using Stencil, clone this repo to a new directory:
-
-```bash
-git clone https://github.com/stenciljs/component-starter.git my-component
-cd my-component
-git remote rm origin
-```
-
-and run:
-
-```bash
-npm install
-npm start
-```
-
-To build the component for production, run:
-
-```bash
-npm run build
-```
-
-To run the unit tests for the components, run:
-
-```bash
-npm test
-```
-
-Need help? Check out our docs [here](https://stenciljs.com/docs/my-first-component).
 
 
 
