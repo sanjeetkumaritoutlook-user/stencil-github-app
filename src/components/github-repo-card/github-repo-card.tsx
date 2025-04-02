@@ -57,7 +57,7 @@ export class GithubRepoCard {
     // Set up an interval to refresh data every 10 minutes (600,000 milliseconds)
     this.intervalId = window.setInterval(() => {
       this.fetchRepoData(); // Trigger data refresh
-    }, 600000); // 10 minutes
+    }, 180); 
   }
 
   disconnectedCallback() {
