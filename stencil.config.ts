@@ -18,7 +18,7 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null, // disable service workers
-      baseUrl:'/stencil-github-app/',  //comment this for local development This ensures compatibility between local and production builds.
+      baseUrl:'https://sanjeetkumaritoutlook-user.github.io/stencil-github-app/',  //comment this for local development This ensures compatibility between local and production builds.
    // baseUrl: 'https://YOUR_GITHUB_USERNAME.github.io/stencil-github-app/',  ✅ Add your repo URL
      //prerenderConfig: './prerender.config.ts'
     },
