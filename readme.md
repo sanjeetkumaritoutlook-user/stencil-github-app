@@ -10,6 +10,15 @@ Stencil combines the best concepts of the most popular frontend frameworks into 
 
 Stencil components are just Web Components, so they work in any major framework or with no framework at all.
 
+## two ways to set up stencil app in local:
+
+1. npm init stencil (if this doesnt work, then)
+
+2.npx create-stencil@latest
+
+
+then cd folder-name , npm install, npm start
+
 ## Getting Started
 
 To start building a new web component using Stencil, clone this repo to a new directory:

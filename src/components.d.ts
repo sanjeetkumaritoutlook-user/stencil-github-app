@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface GithubRepoCard {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +24,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLGithubRepoCardElement extends Components.GithubRepoCard, HTMLStencilElement {
+    }
+    var HTMLGithubRepoCardElement: {
+        prototype: HTMLGithubRepoCardElement;
+        new (): HTMLGithubRepoCardElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +37,13 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "github-repo-card": HTMLGithubRepoCardElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface GithubRepoCard {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +59,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "github-repo-card": GithubRepoCard;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +67,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "github-repo-card": LocalJSX.GithubRepoCard & JSXBase.HTMLAttributes<HTMLGithubRepoCardElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
