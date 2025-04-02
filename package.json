@@ -1,6 +1,6 @@
 {
   "name": "stencil-github-app",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "GitHub Repo Card Component",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
