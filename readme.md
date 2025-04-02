@@ -19,6 +19,13 @@ Stencil components are just Web Components, so they work in any major framework 
 
 then cd folder-name , npm install, npm start
 
+to create new component in stenciljs:  npm run generate 
+
+## publish to npm
+npm run build
+
+npm publish --access public
+
 ## Getting Started
 
 To start building a new web component using Stencil, clone this repo to a new directory:
