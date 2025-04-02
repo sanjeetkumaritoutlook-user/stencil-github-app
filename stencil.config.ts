@@ -18,6 +18,7 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null, // disable service workers
+      baseUrl: 'https://github.com/sanjeetkumaritoutlook-user/stencil-github-app/', // ✅ Add your repo URL
     },
   ],
   testing: {
