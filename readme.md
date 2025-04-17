@@ -10,14 +10,39 @@ in this format :
 <github-repo-card owner="stenciljs" repo="core"></github-repo-card>
 ```
 
+To start using this library:
+
+in another Angular app/React app
+
+```bash
+npm i stencil-github-app
+```
+then in main.ts (Angular)/ in React component file (React):
+```tsx
+import { defineCustomElements } from 'stencil-github-app/loader';
+// Initialize the custom elements
+defineCustomElements(window);
+```
+Make sure you have in app.module.ts in Angular or the standalone component.ts itself(not needed in React)
+```tsx
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+```
+
+then in app.component.html (Angular)/ App.tsx(React) ,
+they can be added as simple tag with any attribute as property in dash-case
+such as:
+```html
+<github-repo-card owner="stenciljs" repo="core"></github-repo-card>
+```
 in another stencilJS application:
 
 in src/global/app.ts:
-
+```tsx
 import { defineCustomElements } from 'stencil-github-app/loader';
 
 defineCustomElements();
-
+```
 
 where owner and repo are Props taking value from github
 
